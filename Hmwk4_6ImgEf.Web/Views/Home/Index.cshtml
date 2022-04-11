@@ -1,0 +1,18 @@
+﻿@using Hmwk4_6ImgEf.Data;
+@model IndexViewModel
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        @foreach (Image img in Model.Images)
+        {
+
+        <div class="jumbotron" style="margin-bottom: 20px; text-align: center;">
+            <a href="/home/viewimage?id=@img.Id">
+                <h3>@img.Title</h3>
+                <h5>@img.Date</h5>
+                <img style="width: 400px;" src="/uploads/@img.ImagePath" />
+            </a>
+        </div>
+        }
+        </div>
+</div>
